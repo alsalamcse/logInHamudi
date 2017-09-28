@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class REGISTER extends AppCompatActivity implements View.OnClickListener {
+public class REGISTER extends AppCompatActivity implements View.OnClickListener
+{
     private static final String PREF_FILE_NAME = "MuhammedPref" ;
     private EditText etNUserName;
     private EditText etNPass;
@@ -17,7 +18,8 @@ public class REGISTER extends AppCompatActivity implements View.OnClickListener 
     private Button btnDelete;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         etNUserName = (EditText) findViewById(R.id.etNUserName);

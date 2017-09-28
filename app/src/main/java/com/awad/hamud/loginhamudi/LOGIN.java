@@ -11,14 +11,15 @@ import android.widget.Toast;
 
 public class LOGIN extends AppCompatActivity implements View.OnClickListener
 {
-    private static final String PREF_FILE_NAME = "MuhammedPref" ;
+    private static final String PREF_FILE_NAME = "MuhammedPref";
     private EditText etUName;
     private EditText etPass;
     private Button btnLogin;
     private Button btnSignup;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         etUName = (EditText) findViewById(R.id.etUName);
@@ -28,21 +29,22 @@ public class LOGIN extends AppCompatActivity implements View.OnClickListener
     }
 
 
-public void onClick (View view){
-    if (view==btnLogin)
+    public void onClick(View view)
     {
-    SharedPreferences prefs = getSharedPreferences(
-            PREF_FILE_NAME,MODE_PRIVATE);
-    String user = prefs.getString("user", null);
-    String passw = prefs.getString("passw" ,null);
-    if (user !=null || passw!=null)
-        Toast.makeText(this, "Succsfully logged", Toast.LENGTH_SHORT).show();
-        finish();
+        if (view == btnLogin)
+        {
+            SharedPreferences prefs = getSharedPreferences(
+                    PREF_FILE_NAME, MODE_PRIVATE);
+            String user = prefs.getString("user", null);
+            String passw = prefs.getString("passw", null);
+            if (user != null || passw != null)
+                Toast.makeText(this, "Succsfully logged", Toast.LENGTH_SHORT).show();
+            finish();
 
-        if (view==btnSignup){
-            Intent intent = new Intent(this,REGISTER.class);
+            if (view == btnSignup)
+            {
+                Intent intent = new Intent(this, REGISTER.class);
+            }
         }
-
-
-}
+    }
 }
